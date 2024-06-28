@@ -1,5 +1,6 @@
 ﻿using JobPortalAPI.Data.Interface;
 using JobPortalAPI.Data.Module;
+using JobPortalAPI.Data.ViewModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,6 +16,25 @@ namespace JobPortalAPI.Data.Controller
         {
             _user = user;
         }
+
+        [Route("Login")]
+
+        [HttpPost]
+        public IActionResult Login(LoginDTO logindto)
+        {
+            return Ok();
+        }
+
+        
+
+        [Route("AssignRole")]
+
+        [HttpPost]
+        public IActionResult AssignRole(RoleAssignDTO roleassigndto)
+        {
+            return Ok();
+        }
+
 
         [Route("GetAllUsers")]
 
@@ -38,9 +58,9 @@ namespace JobPortalAPI.Data.Controller
 
         [HttpPost]
 
-        public IActionResult AddUser(User user)
+        public IActionResult AddUser(UserDTO userdto)
         {
-            return Ok(_user.AddUser(user));
+            return Ok(_user.AddUser(userdto));
         }
 
         [Route("UpdateUser")]

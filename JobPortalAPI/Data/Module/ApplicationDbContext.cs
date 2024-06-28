@@ -13,6 +13,8 @@ namespace JobPortalAPI.Data.Module
         public DbSet<Role> Roles { get; set; }
 
         public DbSet<UserRole> UsersRoles { get; set; }
+
+        public DbSet<RoleAssign> RoleAssigns { get; set; }
         
     }
 

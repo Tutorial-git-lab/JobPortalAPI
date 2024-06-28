@@ -1,6 +1,6 @@
-﻿namespace JobPortalAPI.Data.Module
+﻿namespace JobPortalAPI.Data.ViewModel
 {
-    public class User
+    public class UserDTO
     {
         public int Id { get; set; }
 
@@ -18,14 +18,14 @@
 
         public string FileName { get; set; }
 
-        public bool IsDeleted {  get; set; }
+        public bool IsDeleted { get; set; }
 
         public int CreatedBy { get; set; }
 
-        public DateTime CreatedOn { get; set;}
+        public DateTime CreatedOn { get; set; }
 
-        public int UpdatedBy { get; set;}
+        public int UpdatedBy { get; set; }
 
-        public DateTime  UpdatedOn{ get; set;}
+        public DateTime UpdatedOn { get; set; }
     }
 }
